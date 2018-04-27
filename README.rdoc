@@ -1,3 +1,7 @@
+Note:
+
+This fork developing is active!
+
 = devise_sms_activable
 
 Devise Sms Activable is a snap-in for Devise that will make any resource activable via SMS.
