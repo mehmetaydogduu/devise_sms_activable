@@ -1,0 +1,13 @@
+tr:
+  errors:
+     messages:
+       no_phone_associated: "Hesabınıza henüz telefon bağlantılı değil."
+       sms_already_confirmed: "Zaten sms aktifleştirmesi yapılmış."
+  devise:
+    sms_activations:
+      send_token: 'Bir aktifvasyon kodu %{phone} numarasına gönderildi.'
+      confirmed: 'Hesabınızın sms aktivitesi yapıldu. Şimdi oturum açtınız.'
+      sms_activation_required: 'SMS Aktivasyonu Gerekli'
+      sms_body: 'Aktifleştirme Kodu: %{sms_confirmation_token}.'
+    registrations:
+      signed_up_but_unconfirmed_sms: 'Hesabınızın sms aktivitesi gerekiyor'
