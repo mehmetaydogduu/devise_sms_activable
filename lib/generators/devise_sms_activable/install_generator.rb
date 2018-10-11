@@ -45,7 +45,7 @@ CONTENT
       end
       
       def copy_default_smser
-        copy_file "lib/sms_sender.rb", "lib/devise_sms_sender.rb"
+        copy_file "lib/sms_sender.rb", "lib/devise/sms_sender.rb"
       end
     end
   end
