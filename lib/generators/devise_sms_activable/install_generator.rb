@@ -42,6 +42,7 @@ CONTENT
       
       def copy_locale
         copy_file "../../../config/locales/en.yml", "config/locales/devise_sms_activable.en.yml"
+        copy_file "../../../config/locales/tr.yml", "config/locales/devise_sms_activable.tr.yml"
       end
       
       def copy_default_smser

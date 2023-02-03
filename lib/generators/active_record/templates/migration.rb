@@ -1,7 +1,7 @@
 class DeviseSmsActivableAddTo<%= table_name.camelize %> < ActiveRecord::Migration::Current
   def self.up
     change_table :<%= table_name %> do |t|
-      t.string   :phone
+      t.string   :phone, if_not_exists: true
       t.string   :sms_confirmation_token, :limit => 5
       t.datetime :confirmation_sms_sent_at
       t.datetime :sms_confirmed_at
@@ -13,6 +13,6 @@ class DeviseSmsActivableAddTo<%= table_name.camelize %> < ActiveRecord::Migratio
     remove_column :<%= table_name %>, :sms_confirmation_token
     remove_column :<%= table_name %>, :sms_confirmed_at
     remove_column :<%= table_name %>, :confirmation_sms_sent_at
-    remove_column :<%= table_name %>, :phone
+    remove_column :<%= table_name %>, :phone, if_exists: true
   end
 end
