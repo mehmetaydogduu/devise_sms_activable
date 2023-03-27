@@ -1,29 +1,28 @@
-= devise_sms_activable2
+= devise_sms_activable
 
 Devise Sms Activable is a snap-in for Devise that will make any resource activable via SMS.
 The user will receive an SMS with a token that can be entered on the site to activate the account.
 Ask the user his phone (and phone confirmation to double check) on registration and the token will be sended automagically.
 
-== Installation for Rails ~> 7.0 and Devise ~> 4.0
+== Installation for Rails ~> 3.0 and Devise ~> 1.1
 
 Install DeviseSmsActivable gem, it will also install dependencies (such as devise and warden):
 
-  gem install devise_sms_activable2
+  gem install devise_sms_activable
 
 Add DeviseSmsActivable to your Gemfile (and Devise if you weren't using them):
   
-  gem 'devise',           '>= 4.0.0'
-  gem 'devise_sms_activable2', '~> 0.0.9'
+  gem 'devise_sms_activable', '~> 0.0.9'
   
 === Automatic installation
   
 Run the following generator to add DeviseSmsActivable’s configuration option in the Devise configuration file (config/initializers/devise.rb) and the sms sender class in your lib folder:
 
-  rails generate devise_sms_activable2:install
+  rails generate devise_sms_activable:install
   
 When you are done, you are ready to add DeviseSmsActivable to any of your Devise models using the following generator:
 
-  rails generate devise_sms_activable2 MODEL
+  rails generate devise_sms_activable MODEL
   
 Replace MODEL by the class name you want to add DeviseSmsActivable, like User, Admin, etc. This will add the :sms_activable flag to your model's Devise modules. The generator will also create a migration file (if your ORM support them). Continue reading this file to understand exactly what the generator produces and how to use it.
 
@@ -31,11 +30,11 @@ Replace MODEL by the class name you want to add DeviseSmsActivable, like User, A
 
 All the views are packaged inside the gem. If you'd like to customize the views, invoke the following generator and it will copy all the views to your application:
 
-  rails generate devise_sms_activable2:views
+  rails generate devise_sms_activable:views
 
 You can also use the generator to generate scoped views:
 
-  rails generate devise_sms_activable2:views users
+  rails generate devise_sms_activable:views users
 
 Please refer to {Devise's README}[http://github.com/plataformatec/devise] for more information about views.
 
@@ -56,7 +55,7 @@ DeviseSmsActivable extends your controllers with a <tt>require_sms_activated!</t
 
 DeviseSmsActivable installs a localizable file in your config/locales folder. 
 
-== Contributing to devise_sms_activable2
+== Contributing to devise_sms_activable
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -68,5 +67,5 @@ DeviseSmsActivable installs a localizable file in your config/locales folder.
 
 == Copyleft
 
-This is copyleft fork of devise_sms_activable2 written by Stefano Valicchia.
+This is copyleft fork of devise_sms_activable written by Stefano Valicchia.
 

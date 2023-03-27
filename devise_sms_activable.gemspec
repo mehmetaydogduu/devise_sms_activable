@@ -3,12 +3,12 @@ $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 require 'devise_sms_activable/version'
 
 Gem::Specification.new do |s|
-  s.name         = "devise_sms_activable2"
+  s.name         = "devise_sms_activable"
   s.version      = DeviseSmsActivable::VERSION.dup
   s.platform     = Gem::Platform::RUBY
   s.authors      = ["Mehmet Aydoğdu"]
-  s.email        = ["mehmet@akillibulut.net"]
-  s.homepage     = "https://github.com/giano/devise_sms_activable"
+  s.email        = ["mehmet@aydogdu.me"]
+  s.homepage     = "https://github.com/mehmetaydogduu/devise_sms_activable/"
   s.summary      = "An SMS based activation strategy for Devise"
   s.description  = "It adds support for sending activation tokens via SMS and accepting them."
   s.files        = Dir["{app,config,lib}/**/*"] + %w[LICENSE README.rdoc]
@@ -26,8 +26,8 @@ Gem::Specification.new do |s|
   end
   
   {
-    'rails'  => '>= 3.0.0',
-    'devise' => '>= 1.1.0'
+    'rails'  => '~> 3.0.0',
+    'devise' => '~> 1.1.0'
   }.each do |lib, version|
     s.add_runtime_dependency(lib, version)
   end
